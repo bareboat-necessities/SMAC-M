@@ -105,7 +105,7 @@ do
             ## ogr2ogr s-57 to shapefiles
             echoon
             ogr2ogr -append -skipfailures -f "ESRI Shapefile" --config S57_PROFILE iw $output_shp $where $_FILE $name >> /tmp/errors 2>&1
-            ogr2ogr -append -skipfailures -f "MVT" -dsco FORMAT=DIRECTORY -dsco MAXZOOM=5 --config S57_PROFILE iw ../mvt $where $_FILE $name >> /tmp/errors 2>&1
+            ogr2ogr -append -skipfailures -f "MVT" -dsco FORMAT=DIRECTORY -dsco MAXZOOM=5 --config S57_PROFILE iw ../$name-mvt $where $_FILE $name >> /tmp/errors 2>&1
             { echooff; } 2>/dev/null
 
             # add a special dataset to support Lignts signature...
